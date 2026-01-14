@@ -1,5 +1,6 @@
 ﻿using System;
 using Exiled.API.Features;
+using Exiled.CustomItems.API;
 using Exiled.Events.EventArgs.Player;
 using LabApi.Events;
 
@@ -7,7 +8,7 @@ namespace Zeus27Gun
 {
     public class Plugin : Plugin<Config>
     {
-        public override string Name => "Zeus27";
+        public override string Name => "Zeus27Gun";
         public override string Prefix => Name;
         public override string Author => "Morkamo";
         public override Version Version => new Version(1, 0, 0);
@@ -18,12 +19,16 @@ namespace Zeus27Gun
         public override void OnEnabled()
         {
             Instance = this;
+            Config.Zeus27Shoker.Register();
+            Config.Zeus27Tranquilizer.Register();
             base.OnEnabled();
         }
 
         public override void OnDisabled()
         {
             Instance = null;
+            Config.Zeus27Shoker.Unregister();
+            Config.Zeus27Tranquilizer.Unregister();
             base.OnDisabled();
         }
     }
