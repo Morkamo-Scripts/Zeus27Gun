@@ -156,12 +156,6 @@ namespace Zeus27Gun.Variants
             if (!Check(ev.Firearm))
                 return;
             
-            Timing.CallDelayed(5f, () =>
-            {
-                ev.Firearm.MagazineAmmo = 1;
-                ev.Firearm.MaxMagazineAmmo = 1;
-            });
-            
             if (ev.Target == null || ev.Target.Role.Type == RoleTypeId.Scp173)
                 return;
             

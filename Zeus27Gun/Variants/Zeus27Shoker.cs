@@ -150,7 +150,7 @@ namespace Zeus27Gun.Variants
             if (!Check(ev.Firearm))
                 return;
             
-            Timing.CallDelayed(5f, () =>
+            Timing.CallDelayed(30f, () =>
             {
                 ev.Firearm.MagazineAmmo = 1;
                 ev.Firearm.MaxMagazineAmmo = 1;

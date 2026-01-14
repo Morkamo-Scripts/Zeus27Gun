@@ -1,8 +1,6 @@
 ﻿using System;
 using Exiled.API.Features;
 using Exiled.CustomItems.API;
-using Exiled.Events.EventArgs.Player;
-using LabApi.Events;
 
 namespace Zeus27Gun
 {
